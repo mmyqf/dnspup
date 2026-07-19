@@ -35,6 +35,52 @@
 | FindPing | 查找更适合目标网络的测试节点 | [使用 FindPing](https://dnspup.com/find_ping/) |
 | IPv6 工具 | 从 IPv6 节点执行 Ping、Tcping 和路由测试 | [IPv6 Ping](https://dnspup.com/ping_ipv6/) |
 
+## 全民共享计划
+
+全民共享计划邀请用户把自己拥有并有权管理的闲置设备接入 dnspup 测试网络。节点保持有效在线并完成平台分配的网络检测任务后，用户可以在个人中心实时查看节点状态、本期与累计在线时长、计费标准、预估收益和结算记录。
+
+适合接入的设备包括闲置 VPS、Windows 个人电脑、Linux 主机和飞牛 fnOS NAS。
+
+### 当前支持的平台
+
+| 设备类型 | 支持平台 | 架构 |
+| --- | --- | --- |
+| VPS / 云服务器 | Linux + systemd | x86_64、ARM64 |
+| 个人电脑 / 服务器 | Windows 10、Windows Server 2016 或更新版本 | x86_64 |
+| NAS | 飞牛 fnOS | x86_64、ARM64 |
+
+> 群晖、威联通、Docker 和 macOS 暂未在公开安装入口中列为正式支持平台。请勿使用未经验证的安装方式。
+
+### 如何参与
+
+1. 在 [dnspup](https://dnspup.com) 注册并登录账户
+2. 获取管理员发放的全民共享计划领取码
+3. 在个人中心的“添加节点”区域输入领取码并领取安装资格
+4. 选择飞牛 fnOS、Linux 或 Windows
+5. 复制平台生成的一次性安装命令，或下载对应的 fnOS 安装包
+6. 在自己拥有并有权管理的设备上完成安装
+7. 节点上线后，在个人中心实时查看状态、在线时长、预估收益和结算记录
+
+领取码绑定当前账户，每个领取码用于安装一个节点。成功安装后一次性凭据自动失效。
+
+### 收益与结算
+
+- 预估收益根据节点的有效在线时长和平台当前计费标准计算
+- 节点单独配置的计费标准优先于平台统一标准
+- 个人中心会显示本期在线、累计在线、预估收益和已结算金额
+- 结算周期结束且达到最低有效在线时长后，才可以提交提现申请
+- 提现申请需要平台审核，最终金额以结算记录为准
+- 平台不承诺固定收益；网络质量、在线稳定性、有效任务和规则调整都会影响结果
+
+### 安装前须知
+
+- 只能安装在你拥有或已获得明确授权的设备与网络中
+- 请确认 VPS、宽带和机房服务商允许相关网络检测流量
+- 节点会消耗少量 CPU、内存、网络连接和带宽
+- 不要公开安装命令、领取码或 Token；它们属于节点接入凭据
+- 如凭据疑似泄露，应立即撤销并重新生成
+- 不再参与时，请卸载 Agent 并撤销节点 Token
+
 ## 适合这些场景
 
 - 网站打开慢，判断问题在 DNS、CDN、源站还是运营商线路
@@ -58,18 +104,21 @@
 
 **dnspup** is an online network diagnostics platform for developers, website owners, and network operators. It provides multi-region Ping, Tcping, website speed testing, traceroute/MTR, DNS lookup, IPv6 diagnostics, and website security checks.
 
-Visit **[dnspup.com](https://dnspup.com)** to start testing directly in your browser.
+The **Community Sharing Program** lets participants connect authorized idle Linux VPSs, Windows computers, and fnOS NAS devices to the dnspup probe network. Participants can monitor node status, effective online time, estimated earnings, and settlement records from their account dashboard.
+
+Visit **[dnspup.com](https://dnspup.com)** to get started.
 
 ## 反馈与合作
 
 发现问题、希望增加检测地区，或有节点与产品合作需求：
 
-- 在本仓库提交 [Issue](https://github.com/daming857666-collab/dnspup/issues)
+- 在本仓库提交 [Issue](https://github.com/mmyqf/dnspup/issues)
+- 查看 [Releases](https://github.com/mmyqf/dnspup/releases) 获取计划公告
 - 通过 [dnspup 官网](https://dnspup.com) 联系我们
 
 ## 关于本仓库
 
-本仓库用于 dnspup 的产品介绍、使用入口、公告和问题反馈。平台业务代码未在本仓库中发布。
+本仓库用于 dnspup 的产品介绍、全民共享计划公告、使用入口和问题反馈。平台业务代码未在本仓库中发布。
 
 ---
 
