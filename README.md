@@ -35,51 +35,41 @@
 | FindPing | 查找更适合目标网络的测试节点 | [使用 FindPing](https://dnspup.com/find_ping/) |
 | IPv6 工具 | 从 IPv6 节点执行 Ping、Tcping 和路由测试 | [IPv6 Ping](https://dnspup.com/ping_ipv6/) |
 
-## 全民共享计划
+## 共享节点激励计划
 
-全民共享计划邀请用户把自己拥有并有权管理的闲置设备接入 dnspup 测试网络。节点保持有效在线并完成平台分配的网络检测任务后，用户可以在个人中心实时查看节点状态、本期与累计在线时长、计费标准、预估收益和结算记录。
+[共享节点激励计划](https://dnspup.com/article/content-11.html) 邀请用户将闲置的 NAS、云服务器或个人电脑接入 dnspup 检测网络。设备具备真实有效的 IP 地址并能稳定运行即可申请，节点上线后可在个人中心查看节点与收益。
 
-适合接入的设备包括闲置 VPS、Windows 个人电脑、Linux 主机和飞牛 fnOS NAS。
+### 节点收益与资源占用
 
-### 当前支持的平台
+- 按节点有效在线时长结算，每个节点预计每月收益约 10～20 元
+- 在线越稳定，结算收益越稳定
+- 平均带宽占用低于 1 Mbps，通常不会影响设备正常使用
 
-| 设备类型 | 支持平台 | 架构 |
-| --- | --- | --- |
-| VPS / 云服务器 | Linux + systemd | x86_64、ARM64 |
-| 个人电脑 / 服务器 | Windows 10、Windows Server 2016 或更新版本 | x86_64 |
-| NAS | 飞牛 fnOS | x86_64、ARM64 |
-
-> 群晖、威联通、Docker 和 macOS 暂未在公开安装入口中列为正式支持平台。请勿使用未经验证的安装方式。
+节点仅用于 ICMP、TCP、HTTP 和 traceroute 拨测，不进行数据转发、数据存储、IP 代理或数据提交，也不参与 PCDN 及其他业务。
 
 ### 如何参与
 
-1. 在 [dnspup](https://dnspup.com) 注册并登录账户
-2. 获取管理员发放的全民共享计划领取码
-3. 在个人中心的“添加节点”区域输入领取码并领取安装资格
-4. 选择飞牛 fnOS、Linux 或 Windows
-5. 复制平台生成的一次性安装命令，或下载对应的 fnOS 安装包
-6. 在自己拥有并有权管理的设备上完成安装
-7. 节点上线后，在个人中心实时查看状态、在线时长、预估收益和结算记录
+1. 打开 [dnspup 首页](https://dnspup.com)，点击右上方“习惯设置”
+2. 注册并登录账户
+3. 联系管理员索取领取码，并说明节点所在城市、运营商、系统配置、是否支持 IPv6，以及 IPv4 是公网路由还是普通 NAT 家庭宽带；无法判断时请提供到 `223.5.5.5` 的路由追踪截图
+4. 在个人中心选择飞牛 fnOS、Linux 或 Windows，输入领取码并点击“领取安装资格”
+5. 保存页面显示的一次性码，并按设备类型完成安装
+6. 节点上线后返回个人中心查看节点与收益
 
-领取码绑定当前账户，每个领取码用于安装一个节点。成功安装后一次性凭据自动失效。
+| 设备类型 | 安装方式 |
+| --- | --- |
+| 飞牛 fnOS | 下载对应安装包，在应用中心选择“手动安装”，上传安装包后填写一次性码 |
+| Linux | 领取安装资格后复制页面显示的命令，在 SSH 终端执行 |
+| Windows | 领取安装资格后复制页面显示的命令，在 CMD 中执行 |
 
-### 收益与结算
+完整图文步骤请查看[共享节点激励计划原文](https://dnspup.com/article/content-11.html)。
 
-- 预估收益根据节点的有效在线时长和平台当前计费标准计算
-- 节点单独配置的计费标准优先于平台统一标准
-- 个人中心会显示本期在线、累计在线、预估收益和已结算金额
-- 结算周期结束且达到最低有效在线时长后，才可以提交提现申请
-- 提现申请需要平台审核，最终金额以结算记录为准
-- 平台不承诺固定收益；网络质量、在线稳定性、有效任务和规则调整都会影响结果
+### 接入须知
 
-### 安装前须知
-
-- 只能安装在你拥有或已获得明确授权的设备与网络中
-- 请确认 VPS、宽带和机房服务商允许相关网络检测流量
-- 节点会消耗少量 CPU、内存、网络连接和带宽
-- 不要公开安装命令、领取码或 Token；它们属于节点接入凭据
-- 如凭据疑似泄露，应立即撤销并重新生成
-- 不再参与时，请卸载 Agent 并撤销节点 Token
+- 同一省份、同一运营商已有 3 个或以上公开可用节点时，将暂停接入；能提供当前尚未覆盖的省会城市和运营商节点不受此限制
+- 宽带同时用于 PCDN 或类似高负载用途时不建议安装，以免影响带宽稳定性
+- 节点用于网络诊断，请勿自行添加黑名单或网络策略限制，以免影响检测结果的客观性
+- 安装问题请联系 [cooperate@mail.dnspup.com](mailto:cooperate@mail.dnspup.com)
 
 ## 适合这些场景
 
@@ -104,7 +94,7 @@
 
 **dnspup** is an online network diagnostics platform for developers, website owners, and network operators. It provides multi-region Ping, Tcping, website speed testing, traceroute/MTR, DNS lookup, IPv6 diagnostics, and website security checks.
 
-The **Community Sharing Program** lets participants connect authorized idle Linux VPSs, Windows computers, and fnOS NAS devices to the dnspup probe network. Participants can monitor node status, effective online time, estimated earnings, and settlement records from their account dashboard.
+The **Community Node Incentive Program** lets participants connect idle Linux servers, Windows computers, and fnOS NAS devices to the dnspup probe network. Nodes are used only for ICMP, TCP, HTTP, and traceroute probes, with average bandwidth usage below 1 Mbps. Estimated monthly earnings are CNY 10–20 per node based on effective online time.
 
 Visit **[dnspup.com](https://dnspup.com)** to get started.
 
@@ -118,7 +108,7 @@ Visit **[dnspup.com](https://dnspup.com)** to get started.
 
 ## 关于本仓库
 
-本仓库用于 dnspup 的产品介绍、全民共享计划公告、使用入口和问题反馈。平台业务代码未在本仓库中发布。
+本仓库用于 dnspup 的产品介绍、共享节点激励计划公告、使用入口和问题反馈。平台业务代码未在本仓库中发布。
 
 ---
 
