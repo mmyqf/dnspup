@@ -64,6 +64,8 @@
 
 完整图文步骤请查看[共享节点激励计划原文](https://dnspup.com/article/content-11.html)。
 
+节点安装完成后，可查阅[节点管理命令](docs/node-management-commands.md)，了解飞牛 fnOS、Linux、Windows、OpenWrt、iKuai 和 Docker 环境下的状态检查、更新、启停、日志与卸载操作。
+
 ### 接入须知
 
 - 同一省份、同一运营商已有 3 个或以上公开可用节点时，将暂停接入；能提供当前尚未覆盖的省会城市和运营商节点不受此限制
