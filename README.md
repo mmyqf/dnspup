@@ -180,7 +180,7 @@ No client installation is required. Visit **[dnspup.com](https://dnspup.com)** f
 
 - 功能建议与问题反馈：[提交 Issue](https://github.com/mmyqf/dnspup/issues)
 - 版本与计划公告：[查看 Releases](https://github.com/mmyqf/dnspup/releases)
-- 节点与产品合作：[cooperate@mail.dnspup.com](mailto:cooperate@dnspup.com)
+- 节点与产品合作：[cooperate@dnspup.com](mailto:cooperate@dnspup.com)
 - 在线使用：[dnspup.com](https://dnspup.com)
 
 ## 关于本仓库
