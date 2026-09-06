@@ -1,0 +1,12 @@
+{
+  "name": "dnspup-customer-api-example",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node speed-test-server.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
