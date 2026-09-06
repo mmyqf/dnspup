@@ -1,34 +1,30 @@
 <p align="center">
   <a href="https://dnspup.com">
-    <img src="https://dnspup.com/images/dnspup-logo.png" alt="dnspup" width="420">
+    <img src="https://dnspup.com/images/dnspup-logo.png" alt="dnspup" width="320">
   </a>
 </p>
 
-<h1 align="center">dnspup</h1>
+<h1 align="center">dnspup · 多节点网络检测与开放 API</h1>
 
 <p align="center">
-  面向站长、开发者与网络运维人员的一站式在线网络检测平台
+  面向站长、开发者与网络运维团队的一站式网络诊断、网站性能分析与持续监控平台
 </p>
 
 <p align="center">
-  从连通性、网站性能、DNS 与路由，到本地网络隐私与持续监控
+  <a href="https://dnspup.com"><img src="https://img.shields.io/badge/Website-dnspup.com-0969da?style=flat-square" alt="Website"></a>
+  <a href="https://dnspup.com/api.html"><img src="https://img.shields.io/badge/Customer_API-v1-0f766e?style=flat-square" alt="Customer API v1"></a>
+  <img src="https://img.shields.io/badge/Probe_Nodes-200%2B-16a34a?style=flat-square" alt="200+ Probe Nodes">
+  <img src="https://img.shields.io/badge/Network-IPv4_%20%2B%20IPv6-7c3aed?style=flat-square" alt="IPv4 and IPv6">
+  <a href="https://github.com/mmyqf/dnspup/releases"><img src="https://img.shields.io/badge/Releases-查看发布-8250df?style=flat-square" alt="Releases"></a>
 </p>
 
 <p align="center">
-  <a href="https://dnspup.com"><img src="https://img.shields.io/badge/Website-dnspup.com-0969da?style=for-the-badge" alt="Website"></a>
-  <img src="https://img.shields.io/badge/Probe_Nodes-200%2B-16a34a?style=for-the-badge" alt="200+ Probe Nodes">
-  <img src="https://img.shields.io/badge/Network-IPv4_%2B_IPv6-7c3aed?style=for-the-badge" alt="IPv4 and IPv6">
-  <img src="https://img.shields.io/badge/Mobile-Ready-0891b2?style=for-the-badge" alt="Mobile Ready">
-</p>
-
-<p align="center">
-  <a href="https://dnspup.com/ping/">在线 Ping</a> ·
-  <a href="https://dnspup.com/http/">网站测速</a> ·
-  <a href="https://dnspup.com/website-check/">网站体检</a> ·
-  <a href="https://dnspup.com/dns-propagation/">DNS 传播</a> ·
-  <a href="https://dnspup.com/bgp-asn/">BGP/ASN</a> ·
-  <a href="https://dnspup.com/ip-purity/">IP 纯净度</a> ·
-  <a href="https://dnspup.com/api.html">开放 API</a>
+  <a href="https://dnspup.com"><strong>在线使用</strong></a> ·
+  <a href="https://dnspup.com/api.html">API 文档</a> ·
+  <a href="docs/customer-api-integration.md">接入指南</a> ·
+  <a href="examples/customer-api-node/">Node.js 示例</a> ·
+  <a href="https://github.com/mmyqf/dnspup/releases">Releases</a> ·
+  <a href="https://github.com/mmyqf/dnspup/issues">Issues</a>
 </p>
 
 ---
@@ -39,23 +35,17 @@
 
 平台通过 200+ 个不同地区、不同运营商和海外线路的检测节点并行发起测试，帮助你判断问题来自 DNS、网络路由、端口、TLS、CDN、源站，还是当前本地网络环境。
 
-<p align="center">
-  <a href="https://dnspup.com">
-    <img src="docs/images/dnspup-features-overview.png" alt="dnspup 全功能概览" width="760">
-  </a>
-</p>
+## 与常见单点检测方式对比
 
-## 核心优势
-
-| 能力 | dnspup 提供的价值 |
-| --- | --- |
-| 多地区拨测 | 200+ 节点覆盖中国电信、中国联通、中国移动、多线、港澳台及海外线路 |
-| 完整诊断链路 | 从 Ping、Tcping、HTTP、DNS 到 Traceroute、MTR、BGP/ASN，一次完成交叉定位 |
-| 网站深度体检 | 分析 DNS、连接、TLS、首字节、下载耗时、安全响应头、DNSSEC 与邮件域名配置 |
-| IPv4 与 IPv6 | 提供 IPv4、IPv6 下的 Ping、Tcping、网站测速与路由追踪能力 |
-| 本地网络隐私 | 集成 IP 纯净度、出口一致性、WebRTC 泄露、DNS 泄露与浏览器指纹检测 |
-| 运维效率 | 支持批量 Ping、批量 Tcping、批量 HTTP(S) 以及定时监控与故障通知 |
-| 使用体验 | 无需安装，桌面端和手机端均可直接访问，结果按地区、线路和节点清晰展示 |
+| 对比维度 | 常见单点检测方式 | dnspup |
+| --- | --- | --- |
+| 探测视角 | 结果通常来自当前设备或单一服务器 | 200+ 多地区、多运营商及海外节点交叉验证 |
+| 工具协同 | Ping、DNS、测速和路由工具分散，结果需要人工关联 | 在同一平台串联连通性、性能、DNS、路由与 BGP/ASN 证据 |
+| 网站分析 | 多以状态码或总耗时为主 | 拆分 DNS、连接、TLS、重定向、首字节和下载阶段 |
+| IPv4 / IPv6 | 需要分别寻找兼容工具或环境 | 同时提供 IPv4 与 IPv6 的 Ping、Tcping、HTTP 和路由检测 |
+| 批量与持续性 | 依赖临时脚本，历史数据和告警需要自行建设 | 提供批量检测、定时监控、历史轮次与故障事件 |
+| 自动化接入 | 以人工网页操作为主 | Customer API v1 支持探测、网络工具和监控全生命周期接入 |
+| 使用门槛 | 需要准备命令行环境或部署多个工具 | 浏览器直接使用，桌面端和移动端均可访问 |
 
 ## 完整功能
 
@@ -197,6 +187,17 @@ curl -fsS -X POST \
 
 完整安装、状态检查、更新、启停、日志和卸载命令请查看[节点管理命令](docs/node-management-commands.md)。
 
+## 发布与更新
+
+| 渠道 | 内容 | 入口 |
+| --- | --- | --- |
+| GitHub Releases | 重要版本、计划公告与阶段性里程碑 | [查看全部 Releases](https://github.com/mmyqf/dnspup/releases) |
+| 最新 Release | `community-sharing-v1` · dnspup 全民共享计划首期开放 | [查看发布说明](https://github.com/mmyqf/dnspup/releases/tag/community-sharing-v1) |
+| 产品更新日志 | dnspup 在线服务的功能更新与维护记录 | [查看更新日志](https://dnspup.com/changelog.html) |
+| 问题与建议 | Bug 反馈、功能建议和文档问题 | [提交 Issue](https://github.com/mmyqf/dnspup/issues) |
+
+> GitHub Release 用于发布重要公告与项目里程碑，不等同于节点 Agent 二进制版本；Agent 更新以 dnspup 官网安装入口为准。
+
 ## English Overview
 
 **dnspup** is an all-in-one online network diagnostics platform for developers, website owners, and network operators. It combines 200+ multi-region probe nodes with Ping, Tcping, HTTP performance analysis, Traceroute/MTR, DNS propagation checks, BGP/ASN intelligence, website security checks, IPv6 diagnostics, privacy leak detection, batch testing, and continuous monitoring.
@@ -206,7 +207,6 @@ No client installation is required. Visit **[dnspup.com](https://dnspup.com)** f
 ## 反馈与合作
 
 - 功能建议与问题反馈：[提交 Issue](https://github.com/mmyqf/dnspup/issues)
-- 版本与计划公告：[查看 Releases](https://github.com/mmyqf/dnspup/releases)
 - 节点与产品合作：[cooperate@dnspup.com](mailto:cooperate@dnspup.com)
 - 在线使用：[dnspup.com](https://dnspup.com)
 
