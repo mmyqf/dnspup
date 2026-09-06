@@ -157,11 +157,11 @@ curl -fsS -X POST \
 
 ## 共享节点激励计划
 
-[共享节点激励计划](https://dnspup.com/article/content-11.html) 邀请用户将闲置的 NAS、云服务器或个人电脑接入 dnspup 检测网络。设备具备真实有效的 IP 地址并能稳定运行即可申请，节点上线后可在个人中心查看节点状态与收益。
+[共享节点激励计划](https://dnspup.com/article/content-11.html) 邀请用户将闲置的云服务器或定制设备接入 dnspup 检测网络。设备具备真实有效的 IP 地址并能稳定运行即可申请，节点上线后可在个人中心查看节点状态与收益。
 
 - 按节点有效在线时长结算，每个节点预计每月收益约 10 至 20 元
 - 平均带宽占用低于 1 Mbps，通常不会影响设备正常使用
-- 支持飞牛 fnOS、Linux、Windows、OpenWrt、iKuai 与 Docker 环境
+- 支持Linux、Windows、OpenWrt、iKuai 与 Docker 环境
 - 节点仅用于 ICMP、TCP、HTTP、DNS 和路由拨测
 - 节点不进行数据转发、数据存储、IP 代理或 PCDN 业务
 
