@@ -27,7 +27,8 @@
   <a href="https://dnspup.com/website-check/">网站体检</a> ·
   <a href="https://dnspup.com/dns-propagation/">DNS 传播</a> ·
   <a href="https://dnspup.com/bgp-asn/">BGP/ASN</a> ·
-  <a href="https://dnspup.com/ip-purity/">IP 纯净度</a>
+  <a href="https://dnspup.com/ip-purity/">IP 纯净度</a> ·
+  <a href="https://dnspup.com/api.html">开放 API</a>
 </p>
 
 ---
@@ -137,6 +138,32 @@
 5. 查看延迟、丢包、响应 IP、状态码、解析结果或路由路径
 
 > 测试结果代表对应节点在测试时刻的网络状态。定位复杂问题时，建议结合 Ping、Tcping、DNS 查询、网站测速与路由追踪进行交叉判断。
+
+## Customer API
+
+dnspup Customer API v1 面向需要将多地区网络探测、网站测速和持续监控集成到自有系统的团队。API 支持服务端调用，可用于测速站、运维平台、监控告警、CDN/DNS 变更验证、主机面板、CI/CD 质量门禁以及客户服务门户。
+
+| 接入方向 | 推荐能力 |
+| --- | --- |
+| 网站测速与状态页 | HTTP 探测、批量 HTTP、可用节点、HTTP/SSL 监控 |
+| 网络诊断平台 | Ping、Tcping、DNS、Traceroute、MTR、Find Ping |
+| DNS/CDN 运维 | DNS 查询、DNS 传播、CDN 识别、BGP/ASN 情报 |
+| 安全与资产平台 | 网站体检、TLS、HTTP 安全响应头、IP 纯净度 |
+| 自动化运维 | 监控任务全生命周期、历史轮次、故障事件、套餐与用量 |
+
+```bash
+export DNSPUP_API_KEY='your-api-key'
+export DNSPUP_API_SECRET='your-api-secret'
+
+curl -fsS -X POST \
+  -H "X-API-Key: ${DNSPUP_API_KEY:?set DNSPUP_API_KEY}" \
+  -H "X-API-Secret: ${DNSPUP_API_SECRET:?set DNSPUP_API_SECRET}" \
+  -H 'Content-Type: application/json' \
+  -d '{"type":"http","target":"https://example.com","ipVersion":"4","count":4,"method":"GET"}' \
+  'https://api.dnspup.com/v1/probes'
+```
+
+凭证只能保存在服务端，禁止写入网页、App 或公开仓库。生产接入前请阅读[完整 API 接入指南](docs/customer-api-integration.md)，其中包含认证与来源白名单、完整接口目录、测速站架构、错误和重试策略、安全清单以及可运行的 Node.js 服务端示例。在线接口说明与请求生成器见 [dnspup Customer API v1](https://dnspup.com/api.html)。
 
 ## 共享节点激励计划
 
